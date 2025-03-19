@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        let mang = [];
+        for (let i = 0; i < 10; i++) {
+            mang[i] = parseInt(prompt("Nhập phần tử thứ " + (i + 1)));
+        }
+
+        function daoNguocMang(mang) {
+            let i = 0;
+            let j = mang.length - 1;
+
+            while (i < j) {
+                let t = mang[i];
+                mang[i] = mang[j];
+                mang[j] = t;
+                i++;
+                j--;
+            }
+        }
+
+        daoNguocMang(mang);
+
+        alert(mang);
+    </script>
+
+</html>

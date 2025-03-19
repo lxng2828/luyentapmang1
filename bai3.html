@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        let mang = [];
+        for (let i = 0; i < 10; i++) {
+            mang[i] = parseInt(prompt("nhap phan tu thu " + (i + 1)));
+        }
+        let max = mang[0];
+        let tong = 0;
+        for (let i = 0; i < mang.length; i++) {
+            if (mang[i] > max) {
+                max = mang[i];
+            }
+            tong += mang[i];
+        }
+        let trungBinh = tong / mang.length;
+        alert("gia tri lon nhat la " + max + " va gia tri trung binh la " + trungBinh);
+    </script>
+
+</html>
