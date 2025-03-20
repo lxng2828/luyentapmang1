@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        let mang = [];
+        for (let i = 0; i < 10; i++) {
+            mang[i] = parseInt(prompt("nhap phan tu thu " + (i + 1)));
+        }
+        let v = parseInt(prompt("nhap vao so nguyen v :"))
+
+        function kiemTraVCoTrongMang(v, mang) {
+            for (let i = 0; i < mang.length; i++) {
+                if (v == mang[i]) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        if (kiemTraVCoTrongMang(v, mang) == -1) {
+            alert("V khong trong mang")
+        }
+        else {
+            for (let i = kiemTraVCoTrongMang(v, mang); i < mang.length; i++) {
+                mang[i] = mang[i + 1];
+            }
+        }
+        mang[mang.length - 1] = 0;
+        alert(mang);
+
+    </script>
+
+</html>

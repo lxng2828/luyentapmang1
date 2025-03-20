@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        alert("nhap mang A");
+        let mangA = [];
+        for (let i = 0; i < 10; i++) {
+            mangA[i] = parseInt(prompt("nhap phan tu thu " + (i + 1) + " cua mang A"));
+        }
+        alert("nhap mang B");
+        let mangB = [];
+        for (let i = 0; i < 10; i++) {
+            mangB[i] = parseInt(prompt("nhap phan tu thu " + (i + 1) + " cua mang B"));
+        }
+
+        let mangC = [];
+        for (let i = 0; i < mangA.length; i++) {
+            mangC[i] = mangA[i];
+        }
+        for (let i = mangA.length; i < mangA.length + mangB.length; i++) {
+            mangC[i] = mangB[i-mangA.length];
+        }
+
+        alert(mangC);
+
+    </script>
+
+</html>
